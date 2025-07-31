@@ -1,0 +1,14 @@
+// javascript  Array iteration and objects
+const obj={
+    firstname :" gunasri",
+    lastname :"Rameshkumar",
+    age : 20,
+    graduated :false,
+    joiningdate : new Date("07/30/2024"),
+    number_of_days : ()=>
+    {
+        let curr = new Date()
+        return curr - joining_date
+    }
+    }       
+    console.log(obj)
