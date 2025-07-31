@@ -11,4 +11,8 @@ const obj={
         return curr - joining_date
     }
     }       
-    console.log(obj)
+    let {firstname,lastname,age,graduated,joining_date,number_of_days } = obj  
+    console.log(
+        Math.floor(number_of_days())/(1000*3600*24)
+    )
+       
