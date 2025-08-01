@@ -1,0 +1,22 @@
+//filter
+const arr = [1,2,3,4,5]
+let filteredArr = arr.filter((x)=>x%2==0)
+console.log(filteredArr)
+
+//reduce
+let sum = arr.reduce((acc,val)=>{return acc+val})
+console.log(sum)
+
+//slice
+let copyArr = arr.slice(2,3+1)
+console.log(copyArr)
+
+//splice     
+arr.splice(1,4)
+console.log(arr)
+        
+
+
+
+
+
