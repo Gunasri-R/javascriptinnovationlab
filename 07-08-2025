@@ -1,0 +1,20 @@
+//script.js
+function analyzetext()
+{
+    let input = document.getElementById("input").value;
+    let totaLChars = input.length
+    let wordcount = input.split("").length
+    let noSpace = charCount-(wordCount-1)
+    let sentenceCount = input.match(/[.!?]/g)
+    let uniquewords =[...new set(input.split(""))].length
+    let freq ={}
+    input.split("").map(word)=> {
+        freq[word] = (freq[word])||0+1;
+    });
+
+    }
+    
+
+
+
+
