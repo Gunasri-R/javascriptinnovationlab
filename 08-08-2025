@@ -1,0 +1,48 @@
+function validatename()
+{
+    const regex=/^[A-Za-z\s]+$/;
+    if(!regex.test(name))
+    {
+    return "name must contain alphabets and space"
+}
+return "valid"
+}
+
+function validateemail()
+{
+    const  regex=/^[a-za-Z0-9,-]+@[A-Za-z0-9,-]+\.[A-Za-z]{2,}$/;
+    if(!regex.test(email)){
+    return "email is not validate"
+}
+return "valid"
+}
+function validatepassword()
+{
+    const regex=/^(?+,*[A-Z])(?=.*\d).{8,}$/;
+    if(!regex.test(password)){
+    return "password is not valid and try again..!"
+}
+return "valid"
+}
+function validatephonenumber()
+{
+    const regex =/^[0-9](10)$/;
+    if(!regex.test(phonenumber)){
+    return " invalid phonenumber!"
+}
+return "valid"
+}
+function handleregistrationform()
+{
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let phonenumber= document.getElementById("phonenumber").value;
+   let validatename = validatename(name)
+    validatename(email)
+    validate(password)
+    validatephonenumber(phonenumber)
+
+    
+
+}
