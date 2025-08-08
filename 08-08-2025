@@ -43,6 +43,47 @@ function handleregistrationform()
     validate(password)
     validatephonenumber(phonenumber)
 
+    }
+
+
+
+
+html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Registration Form</h1>
+    <Section>
+    <form>
+            <label for="name">FULL NAME:</label>
+            <input type="text" id="name">
+            <div id="name error"></div><br>
+    
+            <label for=" email"> EMAIL:</label>
+            <input type="text" id="email">
+            <div id="name error"> </div><br>
+
+            <label for="password">PASSWORD:</label>
+            <input type="text" id="password">
+            <div id="password error"></div><br>
+            
+            <label for="phone number">PHONE NUMBER:</label>
+            <input type="text" id="phonenumber">
+            <div id="phone error"></div><br>
+
+    </form>
+     <input type="submit">
+    </Section>
     
 
-}
+
+    
+
+<script src="script.js "></script>
+</body>
+</html>
