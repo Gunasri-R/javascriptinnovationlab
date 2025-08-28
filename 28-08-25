@@ -28,7 +28,7 @@ function add(event)
     item.push(tasks);
     console.log(item)
     item.map((val,index)=>{
-        document.getElementById("res").innerHTML+="<li>"+rel+"</li>";  
+        document.getElementById("res").innerHTML+="<li>"+rel+"</li><button class= deleteitem></button>;  
     })
 document.getElementById("tasks").value="";
    }
