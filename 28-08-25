@@ -4,40 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>to-do-list creation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h2>my to-do-list</h2>
     <form>
-        <input type="text" id="item" placeholder="enter a new task" />
+        <input type="text" id="tasks" placeholder="enter a new task" />
         <button onclick="add(event)">add</button>
     </form>
     <div id="res"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
 
 
-
-//node
-let  item = [];
-function add(event)
-{
+let item = [];
+function add(event) {
     event.preventDefault();
-    document.getElementById("res").innerHTML="";
-    let value= document.getElementById("tasks").value;
-    item.push(tasks);
-    console.log(item)
-    item.map((val,index)=>{
-        document.getElementById("res").innerHTML+="<li>"+rel+"</li><button class= deleteitem></button>;  
-    })
-document.getElementById("tasks").value="";
-   }
-    document.getElementById("res").addEventListener("click",(e)=>{
-        e.target.classList.add("strike")
-        console.log(e.target)
-    })
+    document.getElementById("res").innerHTML = "";
+    let value = document.getElementById("tasks").value;
+    item.push(value);
+    console.log(item);
+    item.map((val, index) => {
+        document.getElementById("res").innerHTML += "<li>" + val + "</li><button class='deleteitem'></button>";
+    });
+    document.getElementById("tasks").value = "";
+}
 
-    //style
-    strike{
+document.getElementById("res").addEventListener("click", (e) => {
+    e.target.classList.add("strike");
+    console.log(e.target);
+});
+
+.strike {
     text-decoration: line-through;
 }
+
+
