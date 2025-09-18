@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Color Buttons</title>
+<style>
+  #color-box {
+    width: 300px;
+    height: 150px;
+    border: 2px solid #333;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000;
+  }
+  button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div id="color-box">Color Box</div>
+
+<button onclick="changeColor('yellow')">Yellow</button>
+<button onclick="changeColor('red')">Red</button>
+<button onclick="changeColor('blue')">Blue</button>
+<button onclick="changeColor('green')">Green</button>
+<button onclick="changeColor('purple')">Purple</button>
+
+<script>
+  function changeColor(color) {
+    const box = document.getElementById('color-box');
+    box.style.backgroundColor = color;
+    box.textContent = color.charAt(0).toUpperCase() + color.slice(1);
+    // Optional: change text color for better contrast
+    if (color === 'yellow' || color === 'green') {
+      box.style.color = '#000';
+    } else {
+      box.style.color = '#fff';
+    }
+  }
+</script>
+
+</body>
+</html>
