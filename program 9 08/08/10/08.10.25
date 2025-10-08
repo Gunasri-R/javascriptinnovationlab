@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="carousel">
+        <img src="https://s.yimg.com/ny/api/res/1.2/GWZ2Q6QA5HgYgoH_zb3kCQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD01Mjg7Y2Y9d2VicA--/https://s.yimg.com/os/creatr-uploaded-images/2024-03/f5725770-ec34-11ee-8fdf-209e18e30c88" alt="no image">
+        <div class="btn">
+        <button>Previous</button>
+        <button onclick="next()">Next</button>
+        </div>
+    </div>
+  <script src="script.js"></script>          
+</body>
+</html>
+
+
+
+body{
+    margin: 0;
+}
+
+.carousel img{
+    height: 100vh;
+    width: 100vw ;
+    position: absolute;
+}
+.carousel .btn{
+    position: absolute;
+    top: 50%;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+const image=document.querySelector(".carousel img")
+const arrimg=["https://s.yimg.com/ny/api/res/1.2/GWZ2Q6QA5HgYgoH_zb3kCQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD01Mjg7Y2Y9d2VicA--/https://s.yimg.com/os/creatr-uploaded-images/2024-03/f5725770-ec34-11ee-8fdf-209e18e30c88","https://www.slantmagazine.com/wp-content/uploads/2024/03/kungfupanda4.jpg", "https://static0.colliderimages.com/wordpress/wp-content/uploads/2024/03/every-kung-fu-panda-movie-ranked.jpg?w=1200&h=675&fit=crop","https://i0.wp.com/www.thewrap.com/wp-content/uploads/2023/12/kung-fu-panda-4-image.jpg?fit=1200%2C675&quality=89&ssl=1", "https://static.toiimg.com/thumb/msid-107967421,width-400,resizemode-4/107967421.jpg"]
+let imgind=0
+function next(){
+    if(arrimg.length-1>imgind)
+    imgind++
+    else
+    imgind=0;
+    image.src=arrimg[imgind]
+}
+function previous(){
+    if(0<imgind)
+    imgind--;
+    else
+    imgind = arrimg.length-1
+}
+document.querySelector(".btn button")[0].addEventListener("click",previous)
+setInterval(next,3000)
